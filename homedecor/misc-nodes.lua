@@ -126,8 +126,7 @@ minetest.register_node('homedecor:flower_pot_green', {
 
 minetest.register_node("homedecor:pole_brass", {
     description = S("Brass Pole"),
-    drawtype = "mesh",
-	mesh = "homedecor_round_pole.obj",
+    drawtype = "nodebox",
     tiles = {"homedecor_tile_brass2.png"},
     inventory_image = "homedecor_pole_brass_inv.png",
     wield_image = "homedecor_pole_brass_inv.png",
@@ -136,12 +135,12 @@ minetest.register_node("homedecor:pole_brass", {
     is_ground_content = true,
     selection_box = {
             type = "fixed",
-            fixed = { -0.125, -0.5, -0.125, 0.125, 0.5, 0.125 },
+            fixed = {-0.125, -0.5, -0.125, 0.125, 0.5, 0.125}
     },
-    collision_box = {
-            type = "fixed",
-            fixed = { -0.125, -0.5, -0.125, 0.125, 0.5, 0.125 },
-    },
+	node_box = {
+		type = "fixed",
+                fixed = {-0.125, -0.5, -0.125, 0.125, 0.5, 0.125}
+	},
     groups = {snappy=3},
     sounds = default.node_sound_wood_defaults(),
 	walkable = true,
